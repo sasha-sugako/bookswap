@@ -1,6 +1,6 @@
 import {Layout, Drawer, Button, Menu} from "antd";
 import {useState} from "react";
-import {Link, Navigate, useNavigate} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import {BookOutlined} from "@ant-design/icons";
 
 const headerStyle = {
@@ -19,12 +19,6 @@ export default function AppHeader(){
     const [open, setOpen] = useState(false);
     let navigate = useNavigate();
     let user = 1;
-    function openDrawer(){
-        if (user) {
-            setOpen(true)
-        }
-        return <Navigate to="/login" replace />
-    }
     return <Layout.Header style={headerStyle}>
         <div style={{display: 'flex', flexDirection: 'row', position: 'relative'}}>
             <Link to="/" style={
