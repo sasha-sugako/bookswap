@@ -5,6 +5,7 @@ import AppLayout from "./components/layout/AppLayout.jsx";
 function App() {
     return (
         <BrowserRouter>
+
             <AppLayout>
                 <Routes>
                     <Route path="/" element={<Home />} />
